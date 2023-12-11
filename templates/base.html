@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Data Visualization</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/logo/favicon.ico')}}"> -->
+
+    <!-- Google icon-->    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- Custome CSS Styles-->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/root.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+
+</head>
+<body>
+
+    <div class="top-nav">
+        <span class="material-icons-round">query_stats</span>
+        <h1>Stock Data Visualization</h1>
+    </div>
+
+    <header>
+        <img src="../static/images/header_001.jpg" alt="">
+        <div class="header-title">
+            <h1>MarketInsight</h1>
+            <h1>Real-Time Stock Visualization</h1>
+            <h3>Explore Financial Markets at a Glance</h3>
+            <p>Welcome to MarketInsight, your gateway to the dynamic world of stock markets.<br> Our platform provides real-time visualization and analysis of stock data, enabling traders, investors, and financial enthusiasts to make informed decisions. <br>Simply enter a stock symbol to uncover trends, view detailed price movements, and get a snapshot of key market statistics. <br>From historical patterns to the latest market shifts, MarketInsight offers a comprehensive, user-friendly tool for your financial analysis needs.</p>
+
+        </div>
+    </header>
+
+    <div class="info">
+
+            <h3>Explore Financial Markets at a Glance</h3>
+    </div>
+
+
+
+
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <h3>Developed by</h3>
+            <h1>Ali Jafarbeglou</h1>
+            <p> This application uses a public, free API with a limit of 25 requests per day. </p>
+            <p>Please be mindful of usage. This tool is not intended for personal or commercial use. If you've reached the limit, please come back another day. Thank you for your understanding.</p>
+            <p>Visit <a href="https://www.alijafarbeglou.com" target="_blank">www.alijafarbeglou.com</a> to learn more about my work.</p>
+        </div>
+        
+    </footer>
+
+    <!-- script -->
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+
+
+</body>
+</html>
