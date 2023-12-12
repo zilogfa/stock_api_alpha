@@ -12,9 +12,12 @@ $(document).ready(function(){
                 $('#result').empty(); // Clear previous results
                 if (data.plot_url) {
                     if (data.stats) {
-                        $('#result').append(`<p>Mean: ${data.stats.mean}</p>
-                                             <p>Max: ${data.stats.max}</p>
-                                             <p>Min: ${data.stats.min}</p>`);
+                        $('#result').append(`
+                                            <div class="static">
+                                            <p><span>Mean:</span> <span>${data.stats.mean}</span></p>
+                                            <p><span>Max:</span> <span>${data.stats.max}</span></p>
+                                            <p><span>Min:</span> <span>${data.stats.min}</span></p>
+                                            <div>`);
                         // Append other stats as needed
                     }
                     $('#result').append(`<img src="${data.plot_url}" alt="Stock Data"/>`);

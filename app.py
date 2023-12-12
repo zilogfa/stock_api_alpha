@@ -103,7 +103,7 @@ def stock_data():
         plot_url = create_plot(df, symbol)
         return jsonify({'plot_url': plot_url, 'stats': stats})
     else:
-        return jsonify({'error': 'invalid symbol or exceeded API rate limit'})
+        return jsonify({'error': 'Failed; invalid symbol or exceeded API rate limit'})
     
 
 if __name__ == '__main__':

@@ -134,24 +134,49 @@ form button:active{
 transform: scale(0.9);}
 
 
-.result{
+#result{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
     margin-bottom: 10rem;
     padding: 1rem;
+    margin-bottom: 12rem;
 }
 
-.result img{
-    border-radius: 25px;
-    box-shadow: var(--box-shadow-dark);
-    border: 1px solid var(--color-light);
+#result .static{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.5rem 4rem;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
     transition: all 0.2s ease;
 }
 
-.result img:hover{
-    box-shadow: 0;
-    transform: scale(1.05);
+#result .static:hover{
+    box-shadow: none;
+}
+
+#result .static p{
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+#result .static span{
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+#result img{
+    box-shadow: var(--box-shadow);
+    transition: all 0.2s ease;
+}
+
+#result img:hover{
+    box-shadow: none;
 }
 
 
