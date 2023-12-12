@@ -175,6 +175,10 @@ transform: scale(0.9);}
     transition: all 0.2s ease;
 }
 
+.img-blur{
+    filter: blur(0.5);
+}
+
 #result img:hover{
     box-shadow: none;
 }
