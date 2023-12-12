@@ -176,7 +176,7 @@ transform: scale(0.9);}
 }
 
 .img-blur{
-    filter: blur(0.5);
+    filter: blur(4px);
 }
 
 #result img:hover{
