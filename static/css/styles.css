@@ -76,10 +76,39 @@ header p{
     align-items: center;
     text-align: center;
     width: 100vw;
-    padding: 2rem 2rem;
+    padding: 1rem 0rem;
     color: var(--color-white);
     background-color: var(--clr-black);
+    box-shadow: var(--box-shadow);
 }
+
+.info .info-icon{
+    width: 100%;
+    overflow: hidden;
+}
+
+.info .info-icon .icons-container {
+    display: flex;
+    width: calc(2.5rem * 11 * 18);
+    flex-direction: row;
+    justify-content: space-around;
+    animation: scroll 70s linear infinite; /* Adjust time for speed */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%); /* Move half the width for looping */
+    }
+}
+
+.info .info-icon img{
+    width: 2.5rem;
+}
+
+
 
 .info p{
     color: var(--clr-tqz-light);
