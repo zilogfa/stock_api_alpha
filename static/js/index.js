@@ -9,11 +9,12 @@ $(document).ready(function(){
             data: $('#stockForm').serialize(),
             success: function(data) {
                 console.log('AJAX request succeeded');
-                $('#result').empty(); 
+                $('#result').empty(); // clearing 
                 
-                if (data.plot_urls) {  // Changed from plot_url to plot_urls
+                if (data.plot_urls) { 
                     if (data.stats) {
-                        $('#result').append(`
+                        //appending stats
+                        $('#result').append(`  
                             <div class="static">
                                 <p><span>Mean:</span> <span>${data.stats.mean}</span></p>
                                 <p><span>Max:</span> <span>${data.stats.max}</span></p>
@@ -22,8 +23,8 @@ $(document).ready(function(){
                                 <p><span>Latest:</span> <span>${data.stats.latest}</span></p>
                             <div>`);
                     }
-
-                    data.plot_urls.forEach(url => {
+                    //appending images
+                    data.plot_urls.forEach(url => { 
                         $('#result').append(`<img src="${url}" alt="Stock Chart" style="margin-top: 20px;"/>`);
                     });
                     
@@ -31,8 +32,9 @@ $(document).ready(function(){
                     $('#result').append(`<p>Error: ${data.error}</p>`);
                 }
             },
+            //debuging
             error: function(xhr, status, errorThrown) {
-                console.log('AJAX error status:', status);
+                console.log('AJAX error status:', status); 
                 console.log('Thrown Error:', errorThrown);
                 console.log('Response:', xhr.responseText);
                 $('#result').html(`<p>Error: ${xhr.responseText || 'Unknown error'}</p>`);
